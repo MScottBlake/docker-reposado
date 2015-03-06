@@ -25,6 +25,7 @@ docker run --name reposado -d -p 8088:8088 mscottblake/reposado
 ```
 
 ## Example #2 - Share a volume from the host
+
 ```bash
 docker run \
   --name reposado \
@@ -36,7 +37,9 @@ docker run \
 ```
 
 ## Example #3 - Changing the Sync frequency
+
 This example will cause `repo_sync` to run every 12 hours.
+
 ```bash
 docker run \
   --name reposado \
@@ -47,7 +50,9 @@ docker run \
 ```
 
 ## Example #4 - Download and host the updates
+
 By default, `DOCKER_REPOSADO_LOCALCATALOGURLBASE` is empty, so the updates aren't really being downloaded, just their metadata. To host the updates on-site, you need to specify a value for this variable.
+
 ```bash
 docker run \
   --name reposado \
@@ -71,7 +76,9 @@ docker run \
 ```
 
 ## Example #6 - Using a second "data-only" container
+
 Instead of sharing a volume with the `-v` flag, you can utilize a data-only container to hold relevant files.
+
 ```bash
 docker run \
   --name reposadoData \
@@ -80,7 +87,9 @@ docker run \
   -v /usr/local/reposadoData/:/foo/reposado \
   busybox
 ```
+
 Make sure to use the `--volumes-from` flag and make sure the `DOCKER_REPOSADO_INSTALL_PATH` environment variable is set to the same directory being used by `reposadoData`.
+
 ```bash
 docker run \
   --name reposado \
