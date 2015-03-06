@@ -6,7 +6,7 @@ A Docker container for running [Reposado](https://github.com/wdas/reposado).
 # Environment Variables
 
 * `DOCKER_REPOSADO_INSTALL_PATH`
-  * Base directory to install reposado. Useful when using a data-only container.
+  * Base directory to install reposado.
   * Default: `/home/app/reposado`
 * `DOCKER_REPOSADO_REPO_SYNC_INTERVAL`
   * Run `repo_sync` every X hours.
@@ -84,7 +84,7 @@ docker run \
   --name reposadoData \
   --privileged \
   -d \
-  -v /usr/local/reposadoData/:/foo/reposado \
+  -v /path/to/reposado/:/foo/reposado \
   busybox
 ```
 
