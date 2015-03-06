@@ -24,15 +24,16 @@ A Docker container for running [Reposado](https://github.com/wdas/reposado).
 docker run --name reposado -d -p 8088:8088 mscottblake/reposado
 ```
 
-## Example #2 - Share a volume from the host
+## Example #2 - Download and host the updates
+
+By default, `DOCKER_REPOSADO_LOCALCATALOGURLBASE` is empty, so the updates aren't really being downloaded, just their metadata. To host the updates on-site, you need to specify a value for this variable.
 
 ```bash
 docker run \
   --name reposado \
   -d \
   -p 8088:8088 \
-  -v /path/to/reposado:/data/reposado \
-  -e DOCKER_REPOSADO_INSTALL_PATH=/data/reposado \
+  -e DOCKER_REPOSADO_LOCALCATALOGURLBASE=http://su.example.com \
   mscottblake/reposado
 ```
 
@@ -49,16 +50,15 @@ docker run \
   mscottblake/reposado
 ```
 
-## Example #4 - Download and host the updates
-
-By default, `DOCKER_REPOSADO_LOCALCATALOGURLBASE` is empty, so the updates aren't really being downloaded, just their metadata. To host the updates on-site, you need to specify a value for this variable.
+## Example #4 - Share a volume from the host
 
 ```bash
 docker run \
   --name reposado \
   -d \
   -p 8088:8088 \
-  -e DOCKER_REPOSADO_LOCALCATALOGURLBASE=http://su.example.com \
+  -v /path/to/reposado:/data/reposado \
+  -e DOCKER_REPOSADO_INSTALL_PATH=/data/reposado \
   mscottblake/reposado
 ```
 
