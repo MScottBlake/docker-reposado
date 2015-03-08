@@ -5,8 +5,8 @@
   <key>LocalCatalogURLBase</key>
   <string></string>
   <key>UpdatesMetadataDir</key>
-  <string>DOCKER_REPOSADO_INSTALL_PATH/metadata</string>
+  <string>/reposado/metadata</string>
   <key>UpdatesRootDir</key>
-  <string>DOCKER_REPOSADO_INSTALL_PATH/html</string>
+  <string>/reposado/html</string>
 </dict>
 </plist>
