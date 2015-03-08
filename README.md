@@ -30,7 +30,7 @@ docker run --name reposado -d -p 8088:8088 -v /path/to/host/preferences.plist:/r
 A data-only container can be used to hold relevant persistent files.
 
 ```bash
-docker run --name reposado-data -d --entrypoint /bin/echo busybox "Data-only container for Reposado."
+docker run --name reposado-data -d --entrypoint /bin/echo mscottblake/reposado "Data-only container for Reposado."
 ```
 
 Make sure to use the `--volumes-from` flag to use the `reposado-data` container you just created.
