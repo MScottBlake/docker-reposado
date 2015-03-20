@@ -13,8 +13,11 @@ RUN apt-get update \
   && rm -f master /etc/nginx/sites-enabled/default /etc/service/nginx/down \
   && rm -rf wdas-reposado-* /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY preferences.plist /reposado/code/preferences.plist
-COPY reposado.conf /etc/nginx/sites-enabled/reposado.conf
+COPY preferences.plist /reposado/code/
+COPY reposado.conf /etc/nginx/sites-enabled/
+
+RUN chgrp -R www-data /reposado \
+  && chmod -R g+wr /reposado
 
 VOLUME /reposado/html
 VOLUME /reposado/metadata
