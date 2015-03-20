@@ -57,7 +57,7 @@ docker exec reposado repo_sync --help
 ## `repoutil`
 
 ```bash
-docker exec reposado repoutil [options]
+docker exec -it reposado repoutil [options]
 ```
 
 ```bash
