@@ -4,6 +4,8 @@ MAINTAINER Scott Blake "Scott.Blake@mail.wvu.edu"
 
 ENV PATH /reposado/code:$PATH
 
+EXPOSE 8088
+
 RUN apt-get update \
   && apt-get install -y curl python \
   && apt-get clean \
