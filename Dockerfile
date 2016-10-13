@@ -20,7 +20,7 @@ COPY preferences.plist /reposado/code/
 COPY reposado.conf /etc/nginx/sites-enabled/
 
 RUN chgrp -R www-data /reposado \
-  && chmod -R g+wr /reposado
+  && chmod -R g+wrs /reposado
 
 VOLUME /reposado/html
 VOLUME /reposado/metadata
