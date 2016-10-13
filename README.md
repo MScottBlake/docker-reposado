@@ -42,7 +42,7 @@ docker run --name reposado --volumes-from reposado-data -d -p 8088:8088 mscottbl
 
 # Performing Reposado functionality
 
-Refer to the Reposado [documentation](https://github.com/wdas/reposado/blob/master/docs/reference.txt) for more information on these utilities.
+Refer to the Reposado [documentation](https://github.com/wdas/reposado/blob/master/docs/reference.md) for more information on these utilities.
 
 ## `repo_sync`
 
