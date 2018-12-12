@@ -1,4 +1,4 @@
-FROM nginx:1.7
+FROM nginx:stable
 
 MAINTAINER Scott Blake "Scott.Blake@mail.wvu.edu"
 
