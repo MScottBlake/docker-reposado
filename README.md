@@ -1,4 +1,5 @@
 # docker-reposado
+[![Build Status](https://img.shields.io/docker/automated/mscottblake/reposado.svg)](https://hub.docker.com/r/mscottblake/reposado/builds/) [![GitHub Stars](https://img.shields.io/github/stars/mscottblake/docker-reposado.svg)](https://github.com/mscottblake/docker-reposado/stargazers) [![Docker Stars](https://img.shields.io/docker/stars/mscottblake/reposado.svg)](https://hub.docker.com/r/mscottblake/reposado) [![Docker Pulls](https://img.shields.io/docker/pulls/mscottblake/reposado.svg)](https://hub.docker.com/r/mscottblake/reposado)
 
 A Docker container for running [Reposado](https://github.com/wdas/reposado).
 
